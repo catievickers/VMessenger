@@ -9,7 +9,7 @@ To get started:
 2 Once Node is installed, open up command prompt and type:
 
   - npm install -g expo-cli
-  - expo init <project name>
+  - expo init [project-name]
   
 - This creates the directory, and you can name it whatever you want.
 - You need to do this to create the directory of node modules because they are not committed to the repo
