@@ -1,7 +1,7 @@
 # VMessenger
 To get started:
 
-1 You will need to download the following:
+1. You will need to download the following:
 
   - Node.js from https://nodejs.org/en/
   - Expo from either the Google Play Store, or the App Store, to demo the app on your phone.
