@@ -1,21 +1,27 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator, createAppContainer} from 'react-navigation';
+import LoginAdapter from './LoginAdapter.js';
+import LoginInterface from './LoginInterface.js';
 
-export default class App extends React.Component {
+const RootStack = createStackNavigator(
+    {
+        Login: LoginAdapter,
+		Home: LoginInterface,
+    },
+    {
+        initialRouteName: 'Home',
+    }
+);
+
+const AppRootStack = createAppContainer(RootStack);
+class App extends React.Component {
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+	<AppRootStack />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
