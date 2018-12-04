@@ -1,19 +1,44 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, Button } from 'react-native';
 import {SkypeLoginAdaptee} from './SkypeLoginAdaptee';
 import {NativeLoginAdaptee} from './NativeLoginAdaptee';
 
 
 export default class LoginAdapter extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {text1:"", text2:""};
+	}
   render() {
-	  const loginType = this.props.navigation.getParam('loginType', 'default'); //loginType will determine which adaptee we want to use
-	   console.log("log in type:" + loginType);
-  if(loginType == 'Native'){
-	  //return NativeLoginAdaptee render()
-  }   
-else if(loginType == 'Skype'){
-	//return SkypeLoginAdaptee render()
-}
+	  const messagingService = this.props.navigation.getParam('messagingService', 'default'); //messagingService will determine which adaptee we are coming from
+	  const iconURL = this.props.navigation.getParam('image', 'default'); //iconURL will determine the file path of the image depending on the messagingService
+	  return (
+	   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text>Log in with your {messagingService}</Text>
+				<Image
+          source={iconURL}
+        />
+				<TextInput
+        style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 100}}
+		autoCorrect={false}
+		textContentType='username'
+		placeholder='Username'
+        onChange={(text1) => this.setState({text1})}
+        value={this.state.text1}
+      />
+	  
+	  <TextInput
+        style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 100}}
+		autoCorrect={false}
+		textContentType = 'password'
+		placeholder='Password'
+        onChange={(text2) => this.setState({text2})}
+        value={this.state.text2}
+      />
+	  
+                <Button title="Log in" onPress= "login()" />
+            </View>
+			);
   }
   
   

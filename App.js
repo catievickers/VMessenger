@@ -1,13 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
 import { createStackNavigator, createAppContainer} from 'react-navigation';
-import LoginAdapter from './LoginAdapter.js';
-import LoginInterface from './LoginInterface.js';
+
+import Home from './screens/Home.js' ;
+import Message from './screens/Message.js';
+
+import VMessengerLogin from './screens/LoginScreens/VMessenger.js';
+import SkypeLogin from './screens/LoginScreens/Skype.js';
+
+import ContactList from './components/ContactList.js';
+import AddContact from './components/AddContact.js';
+
+
+
+console.disableYellowBox = true;
+
 
 const RootStack = createStackNavigator(
     {
-        Login: LoginAdapter,
-		Home: LoginInterface,
+        Home: Home,
+        HomePage: Home,
+        VMessenger: VMessengerLogin,
+        Skype: SkypeLogin,
+        Message: {screen: Message},
+        ContactList: ContactList,
+        AddContact: AddContact
+
     },
     {
         initialRouteName: 'Home',
@@ -15,10 +32,11 @@ const RootStack = createStackNavigator(
 );
 
 const AppRootStack = createAppContainer(RootStack);
-class App extends React.Component {
+class App extends Component {
 
   render() {
     return (
+        
 	<AppRootStack />
     );
   }
