@@ -2,14 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer} from 'react-navigation';
 import LoginAdapter from './LoginAdapter.js';
-import LoginInterface from './LoginInterface.js';
+import Client from './Client.js';
 import NativeLoginAdaptee from './NativeLoginAdaptee';
 import SkypeLoginAdaptee from './SkypeLoginAdaptee';
 
 const RootStack = createStackNavigator(
     {
         Login: LoginAdapter,
-		Home: LoginInterface,
+		Home: Client,
 		Native: NativeLoginAdaptee,
 		Skype: SkypeLoginAdaptee,
     },

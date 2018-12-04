@@ -5,7 +5,11 @@ import LoginAdapter from './LoginAdapter';
 class SkypeLoginAdaptee extends React.Component{
   constructor(props) {
 	  super(props);
-	  const iconURL = require('./assets/skypeIcon.png');
+	  this.loginConfig();
+}
+
+loginConfig(){
+	const iconURL = require('./assets/skypeIcon.png');
 	  const service = 'Skype';
 	this.props.navigation.navigate('Login',{messagingService: service, image: iconURL });
 }

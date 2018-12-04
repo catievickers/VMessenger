@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 
 //login screen
-class LoginInterface extends React.Component {
+class Client extends React.Component {
 	render() {
 		return ( 
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -14,4 +14,4 @@ class LoginInterface extends React.Component {
 	}
 
 }
-export default LoginInterface;
+export default Client;
