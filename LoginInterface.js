@@ -7,8 +7,8 @@ class LoginInterface extends React.Component {
 		return ( 
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Choose a Messaging Service</Text>
-                <Button title="VMessenger" onPress={() => this.props.navigation.navigate('Login',{loginType: 'Native'})} />
-                <Button title="Skype" onPress={() => this.props.navigation.navigate('Login',{loginType: 'Skype'})} />
+                <Button title="VMessenger" onPress={() => this.props.navigation.navigate('Native',{loginType: 'Native'})} />
+                <Button title="Skype" onPress={() => this.props.navigation.navigate('Skype',{loginType: 'Skype'})} />
             </View>
 			);
 	}
