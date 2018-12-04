@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "first_name": "Sawyer",
+        "last_name": "Haggerston",
+        "phone_number": "(788) 321-2582"
+    },
+    {
+        "id": 2,
+        "first_name": "Carny",
+        "last_name": "Abernethy",
+        "phone_number": "(442) 168-6217"
+    },
+    {
+        "id": 3,
+        "first_name": "Betteann",
+        "last_name": "Maycey",
+        "phone_number": "(296) 560-5887"
+    },
+    {
+        "id": 4,
+        "first_name": "Valli",
+        "last_name": "Jorger",
+        "phone_number": "(881) 757-1244"
+    },
+    {
+        "id": 5,
+        "first_name": "Corri",
+        "last_name": "Dell Casa",
+        "phone_number": "(354) 130-9210"
+    }
+]
