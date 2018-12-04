@@ -5,10 +5,10 @@ import LoginAdapter from './LoginAdapter';
 class NativeLoginAdaptee extends React.Component {
   constructor(props) {
 	  super(props);
-	  this.loginConfig();
+	  this.renderConfig();
   }
   
-  loginConfig(){
+  renderConfig(){
 	  const service = 'VMessenger';
 	  const iconURL = require('./assets/VMessengerIcon.png');
     this.props.navigation.navigate('Login',{messagingService: service, image: iconURL });
